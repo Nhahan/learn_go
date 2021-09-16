@@ -11,7 +11,7 @@ func multiply(a int, b int) int { // func 타이핑
 }
 
 func lenAndUpper(name string) (int, string) { // return 2개 이상인 func
-	defer fmt.Println("I'm done!") // func가 끝난 후에 실행되는 코드 (많이 쓴다고 함)
+	defer fmt.Println("I'm done!") // func 끝난 후에 실행되는 코드 (많이 쓴다고 함)
 	return len(name), strings.ToUpper(name)
 }
 
