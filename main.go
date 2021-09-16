@@ -3,7 +3,16 @@ package main
 import (
 	"fmt"
 	"github.com/ksy/learngo/something"
+	"strings"
 )
+
+func multiply(a int, b int) int { // func 타이핑
+	return a * b
+}
+
+func lenAndUpper(name string) (int, string) { // return 2개 이상인 func
+	return len(name), strings.ToUpper(name)
+}
 
 func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 위해 반드시 있어야함!
 	fmt.Println("Hello world!")
@@ -16,4 +25,8 @@ func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 �
 	name := "ksy"                  // 축약 변수 선언
 	fmt.Println(varName)
 	fmt.Println(name)
+
+	fmt.Println(multiply(2, 2))
+	totalLength, upperName := lenAndUpper("ksy") // 만약 2개 이상을 리턴하는 func에서 1개만 리턴하고 싶다면 리턴 변수명을 _로 해주면 ignore된다
+	fmt.Println(totalLength, upperName)
 }
