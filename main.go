@@ -26,6 +26,13 @@ func superAdd(numbers ...int) int {
 	return total
 }
 
+func canIDrink(age int) bool {
+	if koreanAge := age + 2; koreanAge < 18 { // variable expression : koreanAge가 if문의 지역변수임을 알 수 있다
+		return false
+	}
+	return true
+}
+
 func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 위해 반드시 있어야함!
 	fmt.Println("Hello world!")
 
@@ -44,4 +51,6 @@ func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 �
 
 	result := superAdd(1, 2, 3, 4, 5, 6)
 	fmt.Println(result)
+
+	fmt.Println(canIDrink(16))
 }
