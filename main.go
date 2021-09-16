@@ -15,6 +15,17 @@ func lenAndUpper(name string) (int, string) { // return 2개 이상인 func
 	return len(name), strings.ToUpper(name)
 }
 
+func superAdd(numbers ...int) int {
+	fmt.Println(numbers)
+
+	total := 0
+
+	for number := range numbers {
+		total += number
+	}
+	return total
+}
+
 func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 위해 반드시 있어야함!
 	fmt.Println("Hello world!")
 
@@ -30,4 +41,7 @@ func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 �
 	fmt.Println(multiply(2, 2))
 	totalLength, upperName := lenAndUpper("ksy") // 만약 2개 이상을 리턴하는 func에서 1개만 리턴하고 싶다면 리턴 변수명을 _로 해주면 ignore된다
 	fmt.Println(totalLength, upperName)
+
+	result := superAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
