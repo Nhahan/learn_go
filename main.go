@@ -10,10 +10,9 @@ func multiply(a int, b int) int { // func 타이핑
 	return a * b
 }
 
-func lenAndUpper(name string) (length int, uppercase string) { // naked return ... 잘 안쓸거 같은데 일단 있는 것만 알아두자
-	length = len(name)
-	uppercase = strings.ToUpper(name)
-	return
+func lenAndUpper(name string) (int, string) { // return 2개 이상인 func
+	defer fmt.Println("I'm done!") // func가 끝난 후에 실행되는 코드 (많이 쓴다고 함)
+	return len(name), strings.ToUpper(name)
 }
 
 func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 위해 반드시 있어야함!
