@@ -31,6 +31,7 @@ func canIDrink(age int) bool {
 		return false
 	}
 	return true
+	// variable expression은 switch문에서도 동일하게 사용 가능
 }
 
 func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 위해 반드시 있어야함!
