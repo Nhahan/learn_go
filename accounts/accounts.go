@@ -32,4 +32,14 @@ func (a *Account) Withdraw(amount int) error {
 	return nil
 }
 
+// ChangeOwner of the account
+func (a *Account) ChangeOwner(newOwner string) {
+	a.owner = newOwner
+}
+
+// Owner of the account
+func (a Account) Owner() string {
+	return a.owner
+}
+
 var errNoMoney = errors.New("Can't withdraw")

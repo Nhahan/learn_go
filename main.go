@@ -2,20 +2,32 @@ package main
 
 import (
 	"fmt"
-	"github.com/ksy/learngo/accounts"
-	"log"
+	"github.com/ksy/learngo/dict"
 )
 
+//// accounts main
+//func main() {
+//	account := accounts.NewAccount("ksy")
+//	fmt.Println(account)
+//
+//	account.Deposit(10)
+//	fmt.Println(account.Balance())
+//
+//	err := account.Withdraw(20)
+//	if err != nil {
+//		fmt.Println(err)
+//	}
+//	fmt.Println(account.Balance(), account.Owner())
+//}
+
 func main() {
-	account := accounts.NewAccount("ksy")
-	fmt.Println(account)
+	dictionary := dict.Dictionary{}
+	dictionary["hello"] = "hello"
 
-	account.Deposit(10)
-	fmt.Println(account.Balance())
-
-	err := account.Withdraw(20)
+	definition, err := dictionary.Search("hello")
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println(err)
+	} else {
+		fmt.Println(definition)
 	}
-	fmt.Println(account.Balance())
 }
