@@ -34,6 +34,13 @@ func canIDrink(age int) bool {
 	// variable expression은 switch문에서도 동일하게 사용 가능
 }
 
+type person struct {
+	name    string
+	age     int
+	favFood []string  // slice
+	family  [4]string // array
+}
+
 func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 위해 반드시 있어야함!
 	fmt.Println("Hello world!")
 
@@ -57,5 +64,8 @@ func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 �
 
 	a := 2
 	b := &a
-	fmt.Println(a, *b) // *b = 3 -> a = 3
+	fmt.Println(a, *b)                     // *b = 3 -> a = 3
+	favFood := []string{"kimchi", "ramen"} // slice
+	ksy := person{name: "ksy", age: 18, favFood: favFood}
+	fmt.Println(ksy)
 }
