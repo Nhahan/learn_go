@@ -13,14 +13,14 @@ func main() {
 ```
 <br>
 
-#### ✅ Pointer
+### ✅ Pointer
 & : address
 
 <a>*</a> : see through
 
 <br>
 
-#### ✅ Structure, Array, Slice
+### ✅ Structure, Array, Slice
 ```
 type person struct {
 	name string
@@ -31,7 +31,7 @@ type person struct {
 ```
 <br>
 
-#### ✅ Method, Error
+### ✅ Method, Error
 
 ```
 type Account struct {
@@ -82,3 +82,5 @@ func main() {
 	fmt.Println(account.Balance())
 }
 ```
+#### 
+![image](https://user-images.githubusercontent.com/81916648/134031118-2fe8157b-06e2-4c1d-a321-2fd161fe9ffd.png)
