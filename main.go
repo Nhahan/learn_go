@@ -54,4 +54,8 @@ func main() { // Go는 main 패키지의 main func에서 시작. 컴파일을 �
 	fmt.Println(result)
 
 	fmt.Println(canIDrink(16))
+
+	a := 2
+	b := &a
+	fmt.Println(a, *b) // *b = 3 -> a = 3
 }
