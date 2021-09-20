@@ -29,3 +29,56 @@ type person struct {
 	family [4]string // array
 }
 ```
+<br>
+
+#### ✅ Method, Error
+
+```
+type Account struct {
+	owner   string
+	balance int
+}
+
+// NewAccount Constructor function
+func NewAccount(owner string) *Account {
+	account := Account{owner: owner, balance: 0}
+	return &account
+}
+
+// Balance method
+func (a Account) Balance() int {
+	return a.balance
+}
+
+// Deposit method
+func (a *Account) Deposit(amount int) {
+	a.balance += amount
+}
+
+// Withdraw method
+func (a *Account) Withdraw(amount int) error {
+	if a.balance < amount {
+		return errNoMoney
+	}
+	a.balance -= amount
+	return nil
+}
+
+var errNoMoney = errors.New("Can't withdraw")
+```
+```
+func main() {
+	account := accounts.NewAccount("ksy")
+	fmt.Println(account)
+
+	account.Deposit(10)
+	fmt.Println(account.Balance())
+
+	err := account.Withdraw(20)
+	// Exception occured because withdraw > deposit
+	if err != nil {
+		log.Fatalln(err) 
+	}
+	fmt.Println(account.Balance())
+}
+```
