@@ -15,4 +15,5 @@ func main() {
 
 # :white_check_mark: Pointer
 & : address
-/* : see through
+
+<a>*</a> : see through
