@@ -1,4 +1,4 @@
-## :mega: Hello, Go!
+## 📣 Hello, Go!
 
 
 
@@ -11,9 +11,21 @@ func main() {
         fmt.Println("Hello, World!")
 }
 ```
+<br>
 
-
-#### :white_check_mark: Pointer
+#### ✅ Pointer
 & : address
 
 <a>*</a> : see through
+
+<br>
+
+#### ✅ Structure, Array, Slice
+```
+type person struct {
+	name string
+	age int
+	favFood []string // slice
+	family [4]string // array
+}
+```
