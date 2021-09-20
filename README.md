@@ -82,5 +82,7 @@ func main() {
 	fmt.Println(account.Balance())
 }
 ```
-#### 
+#### result
 ![image](https://user-images.githubusercontent.com/81916648/134031118-2fe8157b-06e2-4c1d-a321-2fd161fe9ffd.png)
+
+
