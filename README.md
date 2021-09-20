@@ -13,7 +13,7 @@ func main() {
 ```
 
 
-# :white_check_mark: Pointer
+#### :white_check_mark: Pointer
 & : address
 
 <a>*</a> : see through
