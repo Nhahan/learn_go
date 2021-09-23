@@ -85,4 +85,7 @@ func main() {
 #### result
 ![image](https://user-images.githubusercontent.com/81916648/134031118-2fe8157b-06e2-4c1d-a321-2fd161fe9ffd.png)
 
+<br>
 
+### ✅ Goroutine, Channel
+<b>Channel</b> is the way you communicate with the main function from a <b>Goroutine</b>
