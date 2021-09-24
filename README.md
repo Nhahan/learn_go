@@ -88,7 +88,7 @@ func main() {
 <br>
 
 ### ✅ Goroutine, Channel
-<b>Channel</b> is the way you communicate with the main function from a <b>Goroutine</b>
+<b>Channel</b> is the way to communicate with the main function from a <b>Goroutine</b>
 ```
 type requestResult struct {
 	url    string
