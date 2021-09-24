@@ -88,4 +88,38 @@ func main() {
 <br>
 
 ### ✅ Goroutine, Channel
-<b>Channel</b> is the way you communicate with the main function from a <b>Goroutine</b>
+<b>Channel</b> is the way to communicate with the main function from a <b>Goroutine</b>
+```
+type requestResult struct {
+	url    string
+	status string
+}
+
+func main() {
+	c := make(chan requestResult)
+	urls := []string{
+		"https://www.naver.com/",
+		"https://www.google.com/",
+		"https://www.amazon.com/",
+		"https://www.reddit.com/",
+		"https://www.facebook.com/",
+		"https://www.instagram.com/",
+	}
+
+	for _, url := range urls {
+		go hitURL(url, c)
+	}
+	for i := 0; i < len(urls); i++ {
+		fmt.Println(<-c)
+	}
+}
+
+func hitURL(url string, c chan<- requestResult) { // chan<- : send only
+	resp, err := http.Get(url)
+	status := "OK"
+	if err != nil || resp.StatusCode >= 400 {
+		status = "FAILED"
+	}
+	c <- requestResult{url: url, status: status}
+}
+```
