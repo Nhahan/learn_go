@@ -35,7 +35,7 @@ func checkErr(err error) {
 }
 
 func checkCode(res *http.Response) {
-	if res.StatusCode != 2000 {
+	if res.StatusCode != 200 {
 		log.Fatalln("Request failed with Status:", res.StatusCode)
 	}
 }
